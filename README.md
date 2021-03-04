@@ -1,7 +1,7 @@
-## Multi-Scene Pose Regression with Transformers
+## Multi-Scene Camera Pose Regression with Transformers
 
 This is a PyTorch implementation of multi-scene pose regression with Transformers described in our paper:
-**Multi-Scene Pose Regression with Transformers**,   
+**Multi-Scene Camera Pose Regression with Transformers**,   
  [[arXiv](https://arxiv.org/abs/????)]
 
 ---
