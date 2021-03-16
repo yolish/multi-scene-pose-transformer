@@ -29,6 +29,8 @@ In order to run this repository you will need:
 
 ### Usage
 
+More information to be added 
+
 The entry point for training and testing is the main.py script in the root directory
 
 
