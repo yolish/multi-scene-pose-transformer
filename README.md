@@ -28,7 +28,7 @@ In order to run this repository you will need:
 1. Python3 (tested with Python 3.7.7)
 1. PyTorch deep learning framework (tested with version 1.0.0)
 1. Use torch==1.4.0, torchvision==0.5.0
-1. Download the [Cambridge Landmarks(http://mi.eng.cam.ac.uk/projects/relocalisation/#dataset)] dataset and the [[7Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/)] dataset:
+1. Download the [Cambridge Landmarks](http://mi.eng.cam.ac.uk/projects/relocalisation/#dataset) dataset and the [7Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/) dataset
 
 ---
 
@@ -52,7 +52,7 @@ python main.py ems-transposenet train /./models/backbones/efficient-net-b0.pth <
   
   In order to test your model, for example on the fire scene from the 7Scenes dataset:
   ```
-  python main.py ems-transposenet train /./models/backbones/efficient-net-b0.pth <path to the 7Scenes dataset> ./datasets/7Scenes/abs_7scenes_pose.csv_fire_test.csv --checkpoint_path <path to your checkpoint .pth>
+  python main.py ems-transposenet test /./models/backbones/efficient-net-b0.pth <path to the 7Scenes dataset> ./datasets/7Scenes/abs_7scenes_pose.csv_fire_test.csv --checkpoint_path <path to your checkpoint .pth>
   ```
   
   
