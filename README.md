@@ -2,7 +2,7 @@
 
 This is a PyTorch implementation of a multi-scene camera pose regression paradigm with Transformers described in our paper:
 **Learning Multi-Scene Absolute Pose Regression with Transformers**   
-![Multi-Scene Camera Pose Regression Illustration](/cropped_teaser_small.pdf)
+![Multi-Scene Camera Pose Regression Illustration](./img/cropped_teaser_small.pdf)
 
 
 ---
