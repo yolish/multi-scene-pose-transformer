@@ -1,7 +1,11 @@
 ## Learning Multi-Scene Camera Pose Regression with Transformers
 
 This is a PyTorch implementation of a multi-scene camera pose regression paradigm with Transformers described in our paper:
-**Learning Multi-Scene Absolute Pose Regression with Transformers**   
+**Learning Multi-Scene Absolute Pose Regression with Transformers** 
+
+The figure below illustrates our approach to multi-scene absolute pose regression with Transformers. 
+Two Transformers separately attend to position-  and orientation- informative features from a convolutional backbone. Scene-specific queries (0-3) are further encoded with aggregated activation maps into latent representations, from which a
+single output is selected. The strongest response, shown as an overlaid color-coded heatmap of attention weights, is obtained with the output associated with the input image's scene. The selected outputs are used to regress the position x and the orientation q.  
 ![Multi-Scene Camera Pose Regression Illustration](./img/teaser.PNG)
 
 
@@ -40,8 +44,9 @@ The entry point for training and testing is the main.py script in the root direc
   ```
 python main.py ems-transposenet train /./models/backbones/efficient-net-b0.pth <path to the 7Scenes dataset> ./datasets/7Scenes/7scenes_all_scenes.csv
   ```
-  Your checkpoints (saved based on the number you specify in the configuration file) and log file
+  Your checkpoints (.pth file saved based on the number you specify in the configuration file) and log file
   will be saved under an 'out' folder.
+  
   To run on cambridge, you will need to change the configuration of ems-transposenet in config.json 
   with the relevant configuration from the example_config.json file (ems-transposenet-cambridge)
   
