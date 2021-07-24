@@ -1,7 +1,7 @@
-## Learning Multi-Scene Camera Pose Regression with Transformers
+## Learning Multi-Scene Camera Pose Regression with Transformers (Oral ICCV2021)
 
-This is a PyTorch implementation of a multi-scene camera pose regression paradigm with Transformers described in our paper:
-**Learning Multi-Scene Absolute Pose Regression with Transformers** 
+This is the official PyTorch implementation of a multi-scene camera pose regression paradigm with Transformers described in our paper:
+**Learning Multi-Scene Absolute Pose Regression with Transformers ** 
 
 The figure below illustrates our approach to multi-scene absolute pose regression with Transformers. 
 Two Transformers separately attend to position-  and orientation- informative features from a convolutional backbone. Scene-specific queries (0-3) are further encoded with aggregated activation maps into latent representations, from which a

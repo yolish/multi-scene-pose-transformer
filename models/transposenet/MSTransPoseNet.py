@@ -130,6 +130,7 @@ class MSTransPoseNet(nn.Module):
         heads_res = self.forward_heads(transformers_res)
 
         return heads_res
+
 class PoseRegressor(nn.Module):
     """ A simple MLP to regress a pose component"""
 

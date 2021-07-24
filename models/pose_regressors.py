@@ -1,5 +1,6 @@
 from .posenet.PoseNet import PoseNet
 from .transposenet.EMSTransPoseNet import EMSTransPoseNet
+from  .transposenet.MSTransPoseNet import MSTransPoseNet
 
 def get_model(model_name, backbone_path, config):
     """
@@ -11,6 +12,8 @@ def get_model(model_name, backbone_path, config):
     """
     if model_name == 'posenet':
         return PoseNet(backbone_path)
+    elif model_name == 'ms-transposenet':
+        return MSTransPoseNet(config, backbone_path)
     elif model_name == 'ems-transposenet':
         return EMSTransPoseNet(config, backbone_path)
     else:

@@ -45,7 +45,7 @@
 		"freeze": false,
 		"freeze_exclude_phrase": "regressor_head_rot"
 	},
-	"ems-transposenet-7scenes":
+	"ems-transposenet":
 	{
 		"batch_size": 8,
         "equalize_scenes": false,

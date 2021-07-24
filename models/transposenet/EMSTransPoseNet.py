@@ -8,8 +8,7 @@ from torch import nn
 from .transformer import Transformer
 from .pencoder import NestedTensor, nested_tensor_from_tensor_list
 from .backbone import build_backbone
-from .TransPoseNet import PoseRegressor
-from .MSTransPoseNet import MSTransPoseNet
+from .MSTransPoseNet import MSTransPoseNet, PoseRegressor
 
 
 class EMSTransPoseNet(MSTransPoseNet):
