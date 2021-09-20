@@ -22,12 +22,10 @@ This code implements:
 
 In order to run this repository you will need:
 
-1. Python3 (tested with Python 3.7.7)
-1. PyTorch deep learning framework (tested with version 1.0.0)
-1. Use torch==1.4.0, torchvision==0.5.0
-1. Download the [Cambridge Landmarks](http://mi.eng.cam.ac.uk/projects/relocalisation/#dataset) dataset and the [7Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/) dataset
-Note: All experiments reported in our paper were performed with an 8GB 1080 NVIDIA GeForce GTX GPUlr
-
+1. Python3 (tested with Python 3.7.7, 3.8.5), PyTorch
+2. Set up dependencies with ```pip install -r requirements.txt```
+3. Download the [Cambridge Landmarks](http://mi.eng.cam.ac.uk/projects/relocalisation/#dataset) dataset and the [7Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/) dataset
+4. For a quick set up use
 ---
 
 ### Usage
