@@ -1,0 +1,39 @@
+{
+	"general": {
+		"n_freq_print": 5,
+		"n_freq_checkpoint": 10,
+		"n_workers": 4,
+		"device_id": "cuda:0"
+	},
+	"ems-transposenet":
+	{
+		"batch_size": 8,
+        "equalize_scenes": true,
+		"num_scenes": 4,
+		"learnable": false,
+		"s_x": 1.0,
+		"s_q": 0.0,
+		"lr": 1e-4,
+		"norm": 2,
+		"weight_decay": 1e-4,
+		"eps": 1e-10,
+		"lr_scheduler_gamma": 0.1,
+		"lr_scheduler_step_size": 20,
+		"n_epochs": 60,
+		"num_t_encoder_layers": 6,
+		"num_t_decoder_layers": 6,
+		"num_rot_encoder_layers": 6,
+		"num_rot_decoder_layers": 6,
+		"dim_feedforward": 256,
+		"hidden_dim":256,
+		"dropout": 0.1,
+		"nheads": 4,
+        "reduction": ["reduction_4", "reduction_3"],
+		"freeze": true,
+		"freeze_exclude_phrase": ["regressor_head_t", "transformer_t"],
+		"no_augment": false
+	}
+
+	
+}
+

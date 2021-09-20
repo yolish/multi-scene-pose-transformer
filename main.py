@@ -1,5 +1,5 @@
 """
-Entry point training and testing
+Entry point training and testing multi-scene transformer
 """
 import argparse
 import torch
@@ -23,6 +23,7 @@ if __name__ == "__main__":
     arg_parser.add_argument("backbone_path", help="path to backbone .pth - e.g. efficientnet")
     arg_parser.add_argument("dataset_path", help="path to the physical location of the dataset")
     arg_parser.add_argument("labels_file", help="path to a file mapping images to their poses")
+    arg_parser.add_argument("config_file", help="path to configuration file", default="7scenes-config.json")
     arg_parser.add_argument("--checkpoint_path",
                             help="path to a pre-trained model (should match the model indicated in model_name")
     arg_parser.add_argument("--experiment", help="a short string to describe the experiment/commit used")
@@ -38,7 +39,7 @@ if __name__ == "__main__":
     logging.info("Using labels file: {}".format(args.labels_file))
 
     # Read configuration
-    with open('config.json', "r") as read_file:
+    with open(args.config_file, "r") as read_file:
         config = json.load(read_file)
     model_params = config[args.model_name]
     general_params = config['general']
