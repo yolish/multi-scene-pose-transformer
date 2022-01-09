@@ -25,20 +25,22 @@ In order to run this repository you will need:
 1. Python3 (tested with Python 3.7.7, 3.8.5), PyTorch
 2. Set up dependencies with ```pip install -r requirements.txt```
 3. Download the [Cambridge Landmarks](http://mi.eng.cam.ac.uk/projects/relocalisation/#dataset) dataset and the [7Scenes](https://www.microsoft.com/en-us/research/project/rgb-d-dataset-7-scenes/) dataset
-4. For a quick set up use
----
+
+
+### Pretrained Models 
+You can download our pretrained models for the 7Scenes dataset and the Cambridge dataset (before and after finetuning), from here: [pretrained models](https://drive.google.com/drive/folders/1wBoQ95A-YmQhxysEkri-ojl6PSnfMkdm?usp=sharing)
 
 ### Usage
 
 The entry point for training and testing is the main.py script in the root directory
 
-  For detailed explanation of the options run:
+  For detailed explanation of the options run:)
   ```
   python main.py -h
   ```
   For example, in order to train our model on the 7Scenes dataset run: 
   ```
-python main.py ems-transposenet train models/backbones/efficient-net-b0.pth /path/to/7scenes-datasets ./datasets/7Scenes/7scenes_all_scenes.csv 7Scenes_config.json
+python main.py ems-transposenet train ./models/backbones/efficient-net-b0.pth /path/to/7scenes-datasets ./datasets/7Scenes/7scenes_all_scenes.csv 7Scenes_config.json
   ```
   Your checkpoints (.pth file saved based on the number you specify in the configuration file) and log file
   will be saved under an 'out' folder.
@@ -47,7 +49,7 @@ python main.py ems-transposenet train models/backbones/efficient-net-b0.pth /pat
   
   In order to test your model, for example on the fire scene from the 7Scenes dataset:
   ```
-  python main.py ems-transposenet test /./models/backbones/efficient-net-b0.pth /path/to/7scenes-datasets ./datasets/7Scenes/abs_7scenes_pose.csv_fire_test.csv 7Scenes_config.json --checkpoint_path <path to your checkpoint .pth>
+  python main.py ems-transposenet test ./models/backbones/efficient-net-b0.pth /path/to/7scenes-datasets ./datasets/7Scenes/abs_7scenes_pose.csv_fire_test.csv 7Scenes_config.json --checkpoint_path <path to your checkpoint .pth>
   ```
  ### Citation 
  If you find this repository useful, please consider giving a star and citation:
